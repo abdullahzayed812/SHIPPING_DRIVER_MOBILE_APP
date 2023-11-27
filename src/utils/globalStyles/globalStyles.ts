@@ -1,0 +1,170 @@
+import { I18nManager, StyleSheet } from "react-native";
+import {
+  BORDER_RADIUS,
+  BORDER_WIDTH,
+  FULL_HEIGHT,
+  FULL_WIDTH,
+  HORIZONTAL_SPACING,
+  INPUT_HEIGHT,
+  MAIN_PADDING,
+  MAX_BUTTON_HEIGHT,
+  MIN_BUTTON_HEIGHT,
+  VERTICAL_SPACING,
+} from "../../constants/spacing";
+import { colors } from "../../helpers/colors";
+import { calcFont, calcHeight, calcWidth } from "../../helpers/sizes";
+
+export const globalStyle = StyleSheet.create({
+  text: {
+    fontFamily: "Nunito",
+    fontSize: calcFont(18),
+    color: colors.darkTextColor,
+  },
+  normalText: {
+    fontSize: calcFont(14),
+    fontFamily: "Nunito",
+    color: colors.darkTextColor,
+  },
+  resetText: {
+    textDecorationLine: "underline",
+    textDecorationColor: colors.mainColor,
+    color: colors.mainColor,
+  },
+  pageContainer: {
+    width: FULL_WIDTH,
+    height: FULL_HEIGHT,
+    paddingHorizontal: MAIN_PADDING * 2,
+    backgroundColor: colors.lightColor,
+  },
+  curveBox: {
+    width: "100%",
+    height: 310,
+    position: "absolute",
+    bottom: -10,
+    padding: MAIN_PADDING * 2,
+    paddingTop: MAIN_PADDING * 5,
+    borderRadius: BORDER_RADIUS * 6,
+    borderWidth: BORDER_WIDTH,
+    borderColor: colors.lightGray,
+    borderBottomColor: colors.white,
+  },
+  stepText: {
+    textAlign: "center",
+    marginTop: VERTICAL_SPACING,
+  },
+  number: {
+    color: colors.mainColor,
+  },
+  smallButtonRadius: {
+    height: MAX_BUTTON_HEIGHT - 30,
+    justifyContent: "center",
+    alignItems: "flex-end",
+    paddingRight: MAIN_PADDING,
+    borderRadius: 0,
+    borderTopLeftRadius: BORDER_RADIUS,
+    borderTopRightRadius: BORDER_RADIUS,
+  },
+  smallButtonRadiusTitle: {
+    fontSize: calcFont(10),
+    color: colors.white,
+  },
+  row: {
+    flexDirection: "row",
+    marginBottom: calcHeight(5),
+  },
+  rowText: {
+    width: I18nManager.isRTL ? "65%" : "50%",
+    color: colors.lightGreen,
+  },
+  signatureBox: {
+    width: calcWidth(354),
+    marginTop: VERTICAL_SPACING * 10,
+    paddingBottom: VERTICAL_SPACING,
+    borderRadius: BORDER_RADIUS,
+    backgroundColor: colors.white,
+  },
+  signatureInputBox: {
+    flexDirection: "row",
+    width: calcWidth(274),
+    height: calcHeight(154),
+    marginTop: VERTICAL_SPACING,
+    paddingRight: MAIN_PADDING - 10,
+    paddingTop: MAIN_PADDING - 10,
+    marginBottom: VERTICAL_SPACING - 5,
+    borderWidth: BORDER_WIDTH - 1,
+    borderColor: colors.mainColor,
+  },
+  signatureInput: {
+    flex: 1,
+    backgroundColor: "red",
+  },
+  signatureButton: {
+    height: MIN_BUTTON_HEIGHT,
+    width: calcWidth(165),
+    marginBottom: VERTICAL_SPACING / 2,
+  },
+  line: {
+    height: 2,
+    marginVertical: VERTICAL_SPACING,
+    backgroundColor: colors.darkGray,
+  },
+  directionBetween: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  flatListContentContainerStyle: {
+    paddingBottom: MAIN_PADDING * 12,
+  },
+  errorMessage: {
+    fontSize: calcFont(13),
+    color: "red",
+  },
+  overlay: {
+    position: "absolute",
+    width: FULL_WIDTH,
+    height: FULL_HEIGHT,
+    alignItems: "center",
+    backgroundColor: colors.transparentColor,
+  },
+  inputShape: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    height: INPUT_HEIGHT,
+    borderRadius: BORDER_RADIUS,
+    marginBottom: 2,
+    paddingHorizontal: MAIN_PADDING / 2,
+    backgroundColor: colors.lightGray,
+  },
+  emptyListImg: {
+    width: calcWidth(400),
+    height: calcWidth(400),
+    marginTop: calcHeight(20),
+    marginRight: calcWidth(50),
+  },
+  flatListItem: {
+    marginBottom: VERTICAL_SPACING / 2,
+    borderWidth: BORDER_WIDTH,
+    borderRadius: 0,
+    borderTopLeftRadius: BORDER_RADIUS,
+    borderTopRightRadius: BORDER_RADIUS,
+    borderColor: colors.lightGray,
+  },
+  shipmentDetailsBox: {
+    width: "93%",
+    alignSelf: "center",
+    paddingHorizontal: HORIZONTAL_SPACING,
+    paddingVertical: VERTICAL_SPACING / 2,
+    borderRadius: BORDER_RADIUS,
+    marginBottom: VERTICAL_SPACING,
+    backgroundColor: colors.white,
+  },
+  flatListComponentStyle: {
+    marginBottom: VERTICAL_SPACING / 2,
+    borderRadius: BORDER_RADIUS,
+    paddingHorizontal: HORIZONTAL_SPACING,
+    paddingVertical: VERTICAL_SPACING / 2,
+    backgroundColor: colors.white,
+  },
+});

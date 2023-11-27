@@ -1,0 +1,16 @@
+import { StyleSheet } from 'react-native';
+import { BUTTON_WIDTH, MIN_BUTTON_HEIGHT } from '../../../constants/spacing';
+import { globalStyle } from '../../../utils/globalStyles/globalStyles';
+
+export const styles = StyleSheet.create({
+  langBox: { ...globalStyle.curveBox },
+  buttonBox: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  buttonStyle: {
+    width: BUTTON_WIDTH - 8,
+    height: MIN_BUTTON_HEIGHT,
+  },
+});
